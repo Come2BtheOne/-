@@ -1,0 +1,636 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css/"> -->
+    <style>
+        #menu-list {
+            width: 220px;
+            height: 480px;
+            box-sizing: border-box;
+            /* background-color: #ccc; */
+        }
+
+        #menu-list ul {
+            position: relative;
+        }
+
+        #menu-list li {
+            width: 200px;
+            height: 64px;
+            padding: 8px 10px;
+        }
+
+        .hidebox-menu {
+            width: 761px;
+            height: 480px;
+            position: absolute;
+            top: 0;
+            left: 220px;
+            border: 1px solid #ccc;
+            border-left: none;
+            box-sizing: border-box;
+            display: none;
+            background-color: #fff;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title span {
+            display: block;
+            height: 20px;
+        }
+
+        .title span a {
+            font-size: 13px;
+            color: #fff;
+        }
+
+        .title span img {
+            margin-right: 8px;
+        }
+
+        .title span:nth-child(2) {
+            color: #fff;
+            line-height: 20px;
+        }
+
+        .con {
+            padding-left: 24px;
+        }
+
+        .con a {
+            font-size: 12px;
+            color: #fff;
+            margin-right: 7px;
+            white-space: nowrap;
+            height: 22px;
+            line-height: 22px;
+            display: inline-block;
+        }
+
+        .hidebox-menu .box-l {
+            width: 540px;
+            height: 480px;
+        }
+
+        .hidebox-menu .box-r {
+            padding: 10px;
+        }
+
+        .hidebox-menu .box-r a {
+            display: block;
+        }
+
+        .hidebox-menu .box-r a:nth-child(1) {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .hidebox-menu .box-l dl {
+            padding: 0 0 10px 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 12px;
+        }
+
+        .hidebox-menu .box-l dt {
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+            color: #f21c1c;
+        }
+
+        .hidebox-menu .box-l dd {
+            height: 25px;
+            line-height: 25px;
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hidebox-menu .box-l dd:hover {
+            color: #f21c1c;
+        }
+
+        .hidebox-menu .box-l dd::after {
+            display: inline-block;
+            content: '';
+            background-color: #ccc;
+            width: 2px;
+            height: 14px;
+            margin-left: 8px;
+        }
+
+        .active{
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+<!-- </head> -->
+
+<!-- <body> -->
+    <div id="menu-list">
+        <ul>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/shouji.png" width="16px" height="16px">
+                        <a href="###">手机通讯</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">5G手机</a>
+                    <a href="###">三星 Note 10+</a>
+                    <a href="###">华为 P30</a>
+                    <a href="###">华为 Mate 20</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/shoubiao.png" width="16px" height="16px">
+                        <a href="###">智能家居/智能健康</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">加湿器</a>
+                    <a href="###">电动牙刷</a>
+                    <a href="###">插座</a>
+                    <a href="###">智能电视</a>
+                    <a href="###">智能安防</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/motuo.png" width="16px" height="16px">
+                        <a href="###">智能穿戴/智能出行</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">智能手表</a>
+                    <a href="###">智能手环</a>
+                    <a href="###">儿童手表</a>
+                    <a href="###">车载充电器</a>
+                    <a href="###">车载支架</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/xiangji.png" width="16px" height="16px">
+                        <a href="###">手机配件</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">保护膜</a>
+                    <a href="###">保护壳</a>
+                    <a href="###">数据线</a>
+                    <a href="###">充电器</a>
+                    <a href="###">移动电源</a>
+                    <a href="###">手机耳机</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/xianshiqi.png" width="16px" height="16px">
+                        <a href="###">电脑办公</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">平板电脑</a>
+                    <a href="###">轻薄本</a>
+                    <a href="###">游戏本</a>
+                    <a href="###">路由器</a>
+                    <a href="###">键盘/鼠标</a>
+                    <a href="###">U盘</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <span>
+                        <img src="images/list/erji.png" width="16px" height="16px">
+                        <a href="###">时尚影音/娱乐竞技</a>
+                    </span>
+                    <span>></span>
+                </div>
+                <div class="con">
+                    <a href="###">Beats</a>
+                    <a href="###">SONY</a>
+                    <a href="###">华为</a>
+                    <a href="###">Bose</a>
+                    <a href="###">智能音箱</a>
+                    <a href="###">无人机</a>
+                    <a href="###">摄影摄像</a>
+                </div>
+            </li>
+
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>热门品牌</dt>
+                        <dd>华为</dd>
+                        <dd>苹果</dd>
+                        <dd>荣耀</dd>
+                        <dd>小米</dd>
+                        <dd>OPPO</dd>
+                        <dd>vivo</dd>
+                        <dd>三星</dd>
+                        <dd>魅族</dd>
+                        <dd>美图</dd>
+                        <dd>一加</dd>
+                        <dd>努比亚</dd>
+                        <dd>全部手机</dd>
+                    </dl>
+                    <dl>
+                        <dt>价位</dt>
+                        <dd>0-599</dd>
+                        <dd>600-999</dd>
+                        <dd>1000-1999</dd>
+                        <dd>2000-2999</dd>
+                        <dd>3000-3999</dd>
+                        <dd>4000-4999</dd>
+                        <dd>5000以上</dd>
+                    </dl>
+                    <dl>
+                        <dt>网络制式</dt>
+                        <dd>5G网络</dd>
+                        <dd>4G全网通</dd>
+                        <dd>移动/联通双4G</dd>
+                        <dd>联通4G</dd>
+                        <dd>电信4G</dd>
+                    </dl>
+                    <dl>
+                        <dt>产品特点</dt>
+                        <dd>屏幕指纹识别</dd>
+                        <dd>面部识别解锁</dd>
+                        <dd>全面屏</dd>
+                        <dd>快速充电</dd>
+                        <dd>无线充电</dd>
+                        <dd>液冷散热</dd>
+                        <dd>双卡双待</dd>
+                        <dd>指纹识别</dd>
+                    </dl>
+                    <dl>
+                        <dt>热销机型</dt>
+                        <dd>华为 P30</dd>
+                        <dd>iPhone XR</dd>
+                        <dd>华为 Mate 20</dd>
+                        <dd>华为 nova 4e</dd>
+                        <dd>iPhone X</dd>
+                        <dd>三星S10</dd>
+                        <dd>OPPO Reno</dd>
+                        <dd>vivo X27</dd>
+                        <dd>华为 nova 4</dd>
+                        <dd>华为畅享 9</dd>
+                    </dl>
+                    <dl>
+                        <dt>售后维修</dt>
+                        <dd>手机维修</dd>
+                        <dd>维修配件价格</dd>
+                        <dd>九机服务</dd>
+                        <dd>苹果电池快修</dd>
+                        <dd>苹果显示屏快修</dd>
+                    </dl>
+
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/1-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/1-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>生活周边</dt>
+                        <dd>电子烟</dd>
+                        <dd>路由器</dd>
+                        <dd>插座</dd>
+                        <dd>风扇</dd>
+                        <dd>电池</dd>
+                    </dl>
+                    <dl>
+                        <dt>智能电器</dt>
+                        <dd>加湿器</dd>
+                        <dd>灯光照明</dd>
+                        <dd>榨汁机</dd>
+                        <dd>扫地机器人</dd>
+                        <dd>厨房小电</dd>
+                        <dd>除螨仪</dd>
+                    </dl>
+                    <dl>
+                        <dt>电视/盒子</dt>
+                        <dd>小米电视</dd>
+                        <dd>小米盒子</dd>
+                        <dd>荣耀智慧屏</dd>
+                        <dd>荣耀盒子</dd>
+                    </dl>
+                    <dl>
+                        <dt>智能安防</dt>
+                        <dd>智能门锁</dd>
+                        <dd>智能摄像头</dd>
+                        <dd>电子猫眼/门铃</dd>
+                    </dl>
+                    <dl>
+                        <dt>智能健康</dt>
+                        <dd>电动牙刷</dd>
+                        <dd>剃须刀</dd>
+                        <dd>体脂称</dd>
+                        <dd>按摩设备</dd>
+                    </dl>
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/2-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/2-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>智能手表</dt>
+                        <dd>苹果</dd>
+                        <dd>华为</dd>
+                        <dd>荣耀</dd>
+                        <dd>三星</dd>
+                    </dl>
+                    <dl>
+                        <dt>智能手环</dt>
+                        <dd>华为</dd>
+                        <dd>小米</dd>
+                        <dd>荣耀</dd>
+                    </dl>
+                    <dl>
+                        <dt>儿童手表</dt>
+                        <dd>华为</dd>
+                        <dd>小天才</dd>
+                    </dl>
+                    <dl>
+                        <dt>智能车载</dt>
+                        <dd>车载支架</dd>
+                        <dd>车载充电器</dd>
+                        <dd>行车记录仪</dd>
+                        <dd>车载蓝牙耳机</dd>
+                    </dl>
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/3-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/3-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>保护膜</dt>
+                        <dd>华为保护膜</dd>
+                        <dd>苹果保护膜</dd>
+                        <dd>荣耀保护膜</dd>
+                        <dd>一加保护膜</dd>
+                        <dd>OPPO保护膜</dd>
+                        <dd>vivo保护膜</dd>
+                        <dd>小米保护膜</dd>
+                        <dd>三星保护膜</dd>
+                        <dd>平板保护膜</dd>
+                        <dd>其他</dd>
+                    </dl>
+                    <dl>
+                        <dt>保护壳</dt>
+                        <dd>华为保护壳</dd>
+                        <dd>苹果保护壳</dd>
+                        <dd>荣耀保护壳</dd>
+                        <dd>一加保护壳</dd>
+                        <dd>OPPO保护壳</dd>
+                        <dd>vivo保护壳</dd>
+                        <dd>小米保护壳</dd>
+                        <dd>三星保护壳</dd>
+                        <dd>平板保护壳</dd>
+                        <dd>其他</dd>
+                    </dl>
+                    <dl>
+                        <dt>数据线</dt>
+                        <dd>快充数据线</dd>
+                        <dd>苹果数据线</dd>
+                        <dd>MFI认证线</dd>
+                        <dd>安卓Type-C数据线</dd>
+                        <dd>安卓Micro数据线</dd>
+                        <dd>多合一数据线</dd>
+                        <dd>转接头</dd>
+                    </dl>
+                    <dl>
+                        <dt>充电器</dt>
+                        <dd>无线充电器</dd>
+                        <dd>快充充电器</dd>
+                        <dd>多口充电器</dd>
+                        <dd>单口充电器</dd>
+                        <dd>车载充电器</dd>
+                    </dl>
+                    <dl>
+                        <dt>移动电源</dt>
+                        <dd>超轻薄</dd>
+                        <dd>双向快充</dd>
+                        <dd>自带线</dd>
+                        <dd>无线输出</dd>
+                        <dd>苹果输入</dd>
+                        <dd>Type-C输入</dd>
+                        <dd>安卓Micro输入</dd>
+                        <dd>单口输出</dd>
+                        <dd>多口输出</dd>
+                        <dd>自带线</dd>
+                        <dd>电量数字显示</dd>
+                    </dl>
+                    <dl>
+                        <dt>手机耳机</dt>
+                        <dd>华为耳机</dd>
+                        <dd>苹果耳机</dd>
+                        <dd>荣耀耳机</dd>
+                        <dd>小米耳机</dd>
+                        <dd>三星耳机</dd>
+                        <dd>OPPO耳机</dd>
+                        <dd>vivo耳机</dd>
+                        <dd>一加耳机</dd>
+                    </dl>
+                    <dl>
+                        <dt>手机周边</dt>
+                        <dd>存储卡</dd>
+                        <dd>指环扣/支架</dd>
+                        <dd>自拍杆</dd>
+                        <dd>读卡器</dd>
+                        <dd>触控笔</dd>
+                    </dl>
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/4-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/4-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>电脑</dt>
+                        <dd>苹果</dd>
+                        <dd>华为</dd>
+                        <dd>荣耀</dd>
+                        <dd>联想</dd>
+                        <dd>小米</dd>
+                        <dd>华硕</dd>
+                        <dd>戴尔</dd>
+                        <dd>惠普</dd>
+                        <dd>微软</dd>
+                        <dd>机械革命</dd>
+                        <dd>三星</dd>
+                        <dd>微星</dd>
+                        <dd>神舟</dd>
+                        <dd>宏碁</dd>
+                        <dd>一体机</dd>
+                        <dd>品牌台式机</dd>
+                        <dd>显示器</dd>
+                    </dl>
+                    <dl>
+                        <dt>平板电脑</dt>
+                        <dd>苹果</dd>
+                        <dd>华为</dd>
+                        <dd>荣耀</dd>
+                        <dd>小米</dd>
+                        <dd>微软</dd>
+                        <dd>亚马逊</dd>
+                    </dl>
+                    <dl>
+                        <dt>外设产品</dt>
+                        <dd>鼠标</dd>
+                        <dd>键盘</dd>
+                        <dd>键鼠套</dd>
+                        <dd>U盘</dd>
+                        <dd>移动硬盘</dd>
+                        <dd>鼠标垫</dd>
+                        <dd>转接线</dd>
+                        <dd>适配器</dd>
+                        <dd>保护膜</dd>
+                        <dd>散热器</dd>
+                        <dd>防辐射眼镜</dd>
+                        <dd>电脑包</dd>
+                        <dd>清洁套装</dd>
+                    </dl>
+                    <dl>
+                        <dt>网络产品</dt>
+                        <dd>路由器</dd>
+                        <dd>随行WiFi</dd>
+                        <dd>无线接收器</dd>
+                        <dd>网线</dd>
+                    </dl>
+                    <dl>
+                        <dt>办公设备</dt>
+                        <dd>投影仪</dd>
+                        <dd>投影仪配件</dd>
+                        <dd>打印机</dd>
+                        <dd>办公耗材</dd>
+                    </dl>
+                    <dl>
+                        <dt>服务产品</dt>
+                        <dd>九机上门</dd>
+                    </dl>
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/5-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/5-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+            <div class="hidebox-menu clearfix">
+                <div class="box-l fl">
+                    <dl>
+                        <dt>热门品牌</dt>
+                        <dd>Beats</dd>
+                        <dd>SONY</dd>
+                        <dd>哈曼卡顿</dd>
+                        <dd>华为</dd>
+                        <dd>Bose</dd>
+                        <dd>小鸟</dd>
+                        <dd>GoPro</dd>
+                    </dl>
+                    <dl>
+                        <dt>耳机耳麦</dt>
+                        <dd>华为</dd>
+                        <dd>苹果</dd>
+                        <dd>Beats</dd>
+                        <dd>SONY</dd>
+                        <dd>JBL</dd>
+                        <dd>B&O</dd>
+                        <dd>韶音</dd>
+                        <dd>三星</dd>
+                        <dd>小鸟</dd>
+                    </dl>
+                    <dl>
+                        <dt>音箱/音响</dt>
+                        <dd>哈曼卡顿</dd>
+                        <dd>Bose</dd>
+                        <dd>JBL</dd>
+                        <dd>华为</dd>
+                        <dd>SONY</dd>
+                        <dd>小米</dd>
+                    </dl>    
+                    <dl>
+                        <dt>无人机</dt>
+                        <dd>大疆悟</dd>
+                        <dd>大疆御</dd>
+                        <dd>大疆晓</dd>
+                        <dd>大疆云台</dd>
+                    </dl> 
+                    <dl>
+                        <dt>儿童专区</dt>
+                        <dd>儿童手表</dd>
+                        <dd>儿童玩具</dd>
+                        <dd>益智教育</dd>
+                    </dl>             
+                    <dl>
+                        <dt>数码产品</dt>
+                        <dd>相机</dd>
+                        <dd>播放器</dd>
+                        <dd>翻译机</dd>
+                    </dl>
+                </div>
+                <div class="box-r fr">
+                    <a href="###"><img src="images/list/6-1.jpg" width="200px" height="230px"></a>
+                    <a href="###"><img src="images/list/6-2.jpg" width="200px" height="230px"></a>
+                </div>
+            </div>
+        </ul>
+    </div>
+<!-- </body>
+<script src="lib/jquery-1.10.1.min.js"></script> -->
+<script>
+    (function () {
+        $('#menu-list ul li').mouseenter(function () {
+            let index = $(this).index();
+            $('#menu-list ul .hidebox-menu').css('display', 'none');
+            $('#menu-list ul .hidebox-menu').eq(index).css('display', 'block');
+            $(this).addClass('active')
+        });
+        $('#menu-list ul').mouseleave(function () {
+            $('#menu-list ul .hidebox-menu').css('display', 'none');
+        });
+        $('#menu-list ul li').mouseleave(function () {
+            $(this).removeClass('active')
+        });
+        $('#menu-list ul a').click(function(){
+            location.href = 'listpage.html';
+        });
+        $('#menu-list ul dd').click(function(){
+            location.href = 'listpage.html';
+        });
+    })();
+</script>
+<!-- 
+</html> -->

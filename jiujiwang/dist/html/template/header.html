@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css/base.css"> -->
+    <style>
+        .header {
+            width: 746px;
+            padding-top: 25px;
+        }
+
+        .h-top {
+            margin: 0 0 15px 115px;
+        }
+
+        .h-top .searchbox input {
+            width: 440px;
+            height: 34px;
+            border: 1px solid #f21c1c;
+            padding-left: 10px;
+        }
+
+        .h-top .searchbox span {
+            display: block;
+            background-color: #f21c1c;
+            border: 0;
+            color: #fff;
+            width: 70px;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .h-top p a {
+            font-size: 12px;
+            height: 25px;
+            line-height: 25px;
+            color: #9c9c9c;
+            margin-right: 10px;
+        }
+
+        .h-top p a:nth-child(1) {
+            margin: 0;
+            cursor: auto;
+        }
+
+        .h-bottom ul {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .h-bottom ul li{
+            position: relative;
+        }
+
+        .h-bottom ul li a {
+            color: #333333;
+            padding: 0 16px;
+            font-size: 16px;
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .h-bottom ul li a:hover {
+            color: #f21c1c;
+        }
+
+        .h-bottom ul li .hidebox-header {
+            box-shadow: 0 0 3px #ccc;
+            display: none;
+            position: absolute;
+            top: 40px;
+            background-color: #fff;
+        }
+
+        .h-bottom ul li .hidebox-header div {
+            font-size: 16px;
+            height: 45px;
+            line-height: 45px;
+            color: #333333;
+            cursor: pointer;
+            padding: 0 16px;
+            z-index: 10;
+        }
+
+        .h-bottom ul li .hidebox-header div:hover {
+            background-color: #f21c1c;
+            color: #fff;
+        }
+    </style>
+<!-- </head> -->
+
+<!-- <body> -->
+    <div id="head-bar">
+        <div class="header">
+            <div class="h-top">
+                <div class="searchbox clearfix">
+                    <input type="search" id="search" class="search fl">
+                    <span id="searchbtn" class="searchbtn fl">搜索</span>
+                </div>
+                <p>
+                    <a href="###">热门搜索：</a>
+                    <a href="###">华为 P30</a>
+                    <a href="###">iQOO Pro 5G</a>
+                    <a href="###">三星 Note 10</a>
+                    <a href="###">iPhone XR</a>
+                    <a href="###">华为 nova 5</a>
+                    <a href="###">5G手机</a>
+                </p>
+            </div>
+            <div class="h-bottom">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="###">旧机回收</a></li>
+                    <li><a href="###">一手优品</a></li>
+                    <li><a href="###">二手良品</a></li>
+                    <li><a href="###">售后维修</a>
+                        <div class="hidebox-header">
+                            <div>售后公告</div>
+                            <div>常见问题</div>
+                        </div>
+                    </li>
+                    <li><a href="###">九机头条</a>
+                        <div class="hidebox-header">
+                            <div>行业资讯</div>
+                            <div>数码评测</div>
+                            <div>九机导购</div>
+                        </div>
+                    </li>
+                    <li><a href="###">人气排行</a></li>
+                    <li><a href="###">九机小店</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- </body> -->
+<!-- <script src="../../lib/jquery-1.10.1.min.js"></script> -->
+<!-- <script src="../../lib/menu.js"></script> -->
+<script>
+    (function () {
+        slideMenu({ele:'.h-bottom li'});
+    })();
+
+</script>
+
+<!-- </html> -->

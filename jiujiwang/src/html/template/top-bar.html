@@ -1,0 +1,421 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css/base.css"> -->
+<style>
+    #top-bar {
+        height: 32px;
+        width: 100%;
+        background-color: #e3e4e5;
+        /* position: fixed; */
+        /* top: 0; */
+    }
+
+    .hidebox-top {
+        background-color: #fff;
+    }
+
+    .warpper {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .warpper .warp-left span {
+        font-size: 12px;
+        line-height: 32px;
+        color: #6b6b6b;
+    }
+
+    .warpper .warp-left span a {
+        color: #6b6b6b;
+    }
+
+    .warpper .warp-left span a:hover {
+        color: #f21c1c;
+        text-decoration: underline;
+    }
+
+    .warpper .warp-right>span {
+        font-size: 12px;
+        line-height: 32px;
+        color: #6b6b6b;
+        padding: 0 8px;
+        cursor: pointer;
+        display: block;
+        float: left;
+    }
+
+    .warpper .warp-right .menu1 {
+        position: relative;
+        border-left: 1px solid #e3e4e5;
+        border-right: 1px solid #e3e4e5;
+        padding: 0;
+    }
+
+    .warp-right .menu1:hover {
+        background-color: #fff;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+    .warp-right .menu1 .menubtn {
+        width: 100%;
+        position: relative;
+        padding: 0 8px;
+        z-index: 20;
+        border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+    }
+
+    .warp-right .menu1 .hidebox-top {
+        display: none;
+        position: absolute;
+        top: 32px;
+        left: -1px;
+        padding: 0 8px;
+        z-index: 10;
+    }
+
+    .warp-right .menu1:hover .hidebox-top {
+        display: block;
+        border: 1px solid #ccc;
+    }
+
+    .warp-right .menu1 .hidebox-top>li {
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        color: #333333;
+    }
+
+    .warp-right .menu1 .hidebox-top>li:hover {
+        color: #f21c1c;
+    }
+
+    .warp-right .menu1 .hidebox-top .hide-l p {
+        color: #333333;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    .clearposition {
+        display: flex;
+        align-items: center;
+        cursor: auto;
+    }
+
+    .hidebox-top .clearposition .hide-r dl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 98px;
+        height: 26px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 10px 0;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+
+    .hidebox-top .clearposition .hide-r dt {
+        width: 16px;
+        height: 16px;
+        background-position: 50% 50%;
+        background-size: 100%;
+    }
+
+    .hidebox-top .clearposition .hide-r dd {
+        margin-left: 5px;
+        font-size: 12px;
+        color: #333333;
+    }
+
+    .hidebox-top .clearposition .hide-r dl:hover dd {
+        color: #f21c1c;
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(1) dt {
+        background-image: url(images/icon/android.png);
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(1):hover dt {
+        background-image: url(images/icon/android-hover.png);
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(2) dt {
+        background-image: url(images/icon/IOS.png);
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(2):hover dt {
+        background-image: url(images/icon/IOS-hover.png);
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(3) dt {
+        background-image: url(images/icon/chrome.png);
+    }
+
+    .hidebox-top .clearposition .hide-r dl:nth-child(3):hover dt {
+        background-image: url(images/icon/chrome-hover.png);
+    }
+
+    .warp-right>span:nth-child(4) .menubtn {
+        z-index: 23;
+    }
+
+    .warp-right>span:nth-child(4) .hidebox-top {
+        z-index: 22;
+    }
+
+    .warp-right>span:nth-child(7) .menubtn {
+        z-index: 25;
+    }
+
+    .warp-right>span:nth-child(7) .hidebox-top {
+        left: -900px;
+        z-index: 24;
+        padding: 0;
+        cursor: auto;
+    }
+
+    .hidebox-top .list {
+        width: 1200px;
+        display: flex;
+        padding-bottom: 50px
+    }
+
+    .hidebox-top .list li {
+        width: 25%;
+        padding: 20px 0 0 20px;
+    }
+
+    .hidebox-top .list li h4 {
+        font-size: 16px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    .hidebox-top .list li:nth-child(1) h4 {
+        color: #f21c1c;
+    }
+
+    .hidebox-top .list li:nth-child(2) h4 {
+        color: #a776d9;
+    }
+
+    .hidebox-top .list li:nth-child(3) h4 {
+        color: #7788bb;
+    }
+
+    .hidebox-top .list li:nth-child(4) h4 {
+        color: #73ae37;
+    }
+
+    .hidebox-top .list li:nth-child(5) h4 {
+        color: #ff5050;
+    }
+
+    .hidebox-top .list .listbox {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hidebox-top .list .listbox h5 {
+        width: 50%;
+        color: #333333;
+    }
+
+    .hidebox-top .list .listbox h5:hover {
+        color: #f21c1c;
+        cursor: pointer;
+    }
+
+
+    .hidebox-top .callus p {
+        font-size: 12px;
+        line-height: 18px;
+        height: 18px;
+        color: #333333;
+        width: 200px;
+    }
+
+    .warp-right>span:nth-child(9) .hidebox-top {
+        left: auto;
+        right: -1px;
+        padding: 10px;
+        cursor: auto;
+    }
+
+
+    .hidebox-top .callus .call input {
+        height: 32px;
+    }
+
+    .hidebox-top .callus .call input:nth-child(1) {
+        width: 160px;
+        display: block;
+        padding-left: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .hidebox-top .callus .call input:nth-child(2) {
+        width: 40px;
+        display: block;
+        background-color: #f21c1c;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #setname1{
+        font-weight: bold;
+    }
+
+    #setname1:hover {
+        color: #f21c1c;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
+<!-- </head> -->
+
+<!-- <body> -->
+<div class="top-bar" id="top-bar">
+    <div class="warpper clearfix">
+        <div class="warp-left fl">
+            <span>Hi，</span>
+            <span id="setname1">欢迎来九机！</span>
+            <span><a href="###" id="loginorquit1">登录</a></span>
+            <span><a href="reg.html" id="reg">免费注册</a></span>
+        </div>
+        <div class="warp-right fr clearfix">
+            <span id="menu1" class="menu1">
+                <h2 class="menubtn">个人中心
+                    <img src="images/icon/sanjiao.png" width="8px" height="4px" style="margin-left: 5px">
+                </h2>
+                <ul class="hidebox-top">
+                    <li>我的订单</li>
+                    <li>我的积分</li>
+                    <li>我的试用</li>
+                    <li>我的收藏</li>
+                    <li>我的咨询</li>
+                    <li>我的优惠券</li>
+                    <li>保修/退换货</li>
+                </ul>
+            </span>
+            <span><img src="images/icon/huangguan.png" width="14px" height="14px">会员俱乐部</span>
+            <span>帮助中心</span>
+            <span class="menu1">
+                <h2 class="menubtn">
+                    <img src="images/icon/shouji.png" width="14px" height="14px">客户端
+                </h2>
+                <div class="hidebox-top" style="padding: 10px">
+                    <div class="clearposition">
+                        <div class="hide-l fl">
+                            <img src="images/kehuduan.png" width="100px" height="100px">
+                            <p>扫描二维码下载</p>
+                        </div>
+                        <div class="hide-r fl" style="margin-left: 10px">
+                            <dl>
+                                <dt></dt>
+                                <dd>Android</dd>
+                            </dl>
+                            <dl>
+                                <dt></dt>
+                                <dd>iPhone</dd>
+                            </dl>
+                            <dl>
+                                <dt></dt>
+                                <dd>触屏版</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span>企业采购</span>
+            <span>在线客服</span>
+            <span class="menu1">
+                <h2 class="menubtn">
+                    网站导航<img src="images/icon/sanjiao.png" width="8px" height="4px" style="margin-left: 5px">
+                </h2>
+                <div class="hidebox-top">
+                    <ul class="list">
+                        <li>
+                            <h4>九机特色</h4>
+                            <div class="listbox">
+                                <h5>附近门店</h5>
+                                <h5>一手优品</h5>
+                                <h5>二手良品</h5>
+                                <h5>旧机回收</h5>
+                                <h5>预约维修</h5>
+                                <h5>九机小店</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>服务集市</h4>
+                            <div class="listbox">
+                                <h5>在线支付</h5>
+                                <h5>话费充值</h5>
+                                <h5>试用中心</h5>
+                                <h5>帮助中心</h5>
+                                <h5>九机服务</h5>
+                                <h5>会员俱乐部</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>招商合作</h4>
+                            <div class="listbox">
+                                <h5>供应商申请</h5>
+                                <h5>IT服务</h5>
+                                <h5>商务合作</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>更多精选</h4>
+                            <div class="listbox">
+                                <h5>九机头条</h5>
+                                <h5>人才招聘</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>产品选择</h4>
+                            <div class="listbox">
+                                <h5>手机</h5>
+                                <h5>手机配件</h5>
+                                <h5>电脑办公</h5>
+                                <h5>时尚影音</h5>
+                                <h5>智能家居</h5>
+                                <h5>娱乐竞技</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <span><img src="images/icon/xunhuan.png" width="14px" height="14px" style="margin-right: 5px">不良信息举报</span>
+            <span class="menu1">
+                <h2 class="menubtn">
+                    <img src="images/icon/dianhua.png" width="14px" height="14px" style="margin-right: 5px">440-008-3939
+                </h2>
+                <div class="hidebox-top">
+                    <div class="callus">
+                        <p>
+                            输入手机号码并免费拨打：
+                        </p>
+                        <div class="call clearfix">
+                            <input type="text" class="fl">
+                            <input type="button" value="拨打" class="fl">
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+<!-- </body>
+
+</html> -->

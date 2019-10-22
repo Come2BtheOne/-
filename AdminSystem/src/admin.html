@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九机网后台管理系统</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div id="header" class="header clearfix">
+        <h1>九机网后台管理系统</h1>
+        <div class="user_nav">
+            <div class="nav_l clearfix">
+                <span>欢迎你，</span>
+                <span id="nav_user" class="nav_user">请先登录</span>
+            </div>
+            <div class="nav_c" id="nav_c">
+                退出系统
+            </div>
+            <div class="nav_r">
+                <input type="text" name="" id="search" class="search" placeholder="搜索...">
+                <div id="searchbtn" class="searchbtn"></div>
+            </div>
+        </div>
+    </div>
+    <div id="wrap" class="wrap">
+        <div id="menu" class="menu left">
+            <div id="menu_list" class="menu_list">
+                <h2>用户管理</h2>
+                <ul>
+                    <li class="active">用户信息</li>
+                    <li>添加新用户</li>
+                    <!-- <li>修改密码</li> -->
+                </ul>
+                <h2>商品信息管理</h2>
+                <ul>
+                    <li>商品列表</li>
+                    <li>商品信息管理</li>
+                    <li>添加商品</li>
+                </ul>
+                <h2>订单管理</h2>
+                <ul>
+                    <li>订单信息</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <iframe width="88%" id="content" src="html/userinf.html" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+<script src="lib/jquery-1.10.1.min.js"></script>
+<script src="lib/Ray-common.js"></script>
+<script src="js/admin.js"></script>
+
+</html>

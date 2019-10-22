@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加商品</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/addgoods.css">
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="log_head">
+            <span class="logo_left">
+                <a href="###">
+                    <img src="../images/new-logo.png" width="100" height="50">
+                </a>
+            </span>
+            <span class="logo_right">添加商品</span>
+        </div>
+        <div class="content">
+            <div class="con_top clearfix">
+                <div id="con_l" class="con_l fl">
+                    <span id="slow" class="slow fl active">输入商品信息</span>
+                </div>
+            </div>
+            <div id="con_main" class="con_main">
+                <div class="hidebox">
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>商品名字</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="b2p1">
+                            <p class="inf fl" id="inf1">必填。商品的名字，尽可能写详细</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>商品价格</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="b1s">
+                            <p class="inf fl" id="inf2">必填。上架的价格</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>商品类型</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="b2s">
+                            <p class="inf fl" id="inf1">必填。商品类型，如：连衣裙，牛仔裤</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>库存</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="stock">
+                            <p class="inf fl" id="inf1">必填。商品目前的库存量，至少1件</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>店铺名字</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="b3h6">
+                            <p class="inf fl" id="inf1">必填。卖家的名字</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span>*</span>
+                            <span>图片1</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="pb1">
+                            <p class="inf fl" id="inf1">必填。商品的图片路径，至少提供一张</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span></span>
+                            <span>图片2</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="pb2">
+                            <p class="inf fl" id="inf1">选填。默认为第一张图片</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span></span>
+                            <span>图片3</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="pb3">
+                            <p class="inf fl" id="inf1">选填。默认为第一张图片</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span></span>
+                            <span>图片4</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="pb4">
+                            <p class="inf fl" id="inf1">选填。默认为第一张图片</p>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="fl">
+                            <span></span>
+                            <span>图片5</span>
+                        </dt>
+                        <dd class="fl clearfix">
+                            <input type="text" class="fl" id="pb5">
+                            <p class="inf fl" id="inf1">选填。默认为第一张图片</p>
+                        </dd>
+                    </dl>
+                    <div class="regbox clearfix">
+                        <div id="reg" class="reg fl">确认提交</div>
+                        <div id="empty" class="empty fl">清空重填</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/Ray-common.js"></script>
+<script src="../js/addgoods.js"></script>
+
+</html>

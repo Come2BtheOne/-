@@ -1,0 +1,224 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css/base.css"> -->
+    <style>
+        #logo {
+            width: 230px;
+            height: 144px;
+        }
+
+        .logo-top {
+            display: flex;
+            align-items: center;
+            height: 100px;
+        }
+
+        .logo-top .local {
+            height: 50px;
+            padding-left: 28px;
+            margin-left: 28px;
+            border-left: 1px solid #dfdfdf;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-top .local .city {
+            display: flex;
+            align-items: flex-end;
+            width: 55px;
+        }
+
+        .logo-top .local .city h3 {
+            font-size: 15px;
+            color: #333333;
+            cursor: pointer;
+        }
+
+        .logo-top .local p a {
+            display: block;
+            font-size: 12px;
+            color: #9c9c9c;
+            height: 18px;
+            line-height: 18px;
+        }
+
+        .logo-bottom .all-menu h2 {
+            width: 220px;
+            height: 45px;
+            font-size: 15px;
+            line-height: 45px;
+            background-color: #f21c1c;
+            color: #fff;
+            padding-left: 15px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .logo-top .local .hidebox-logo {
+            position: absolute;
+            top: 25px;
+            border: 1px solid #ccc;
+            display: none;
+            z-index: 30;
+            background-color: #fff;
+            width: 500px;
+            height: 344px;
+            border: 1px solid #ccc;
+        }
+
+        .hidebox-logo .title {
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding-left: 10px;
+        }
+
+        .hidebox-logo .title .title-l {
+            display: flex;
+        }
+
+        .hidebox-logo .title .title-l li {
+            font-size: 12px;
+            color: #333333;
+            line-height: 40px;
+        }
+
+        .hidebox-logo .title .title-l li:nth-child(n+2) {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .hidebox-logo .title .title-l li:nth-child(n+2):hover {
+            color: #f21c1c;
+        }
+
+        .hidebox-logo .title .title-r {
+            height: 100%;
+            width: 40px;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: #f21c1c;
+            cursor: pointer;
+        }
+
+        .hidebox-logo .provinces {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .hidebox-logo .provinces span {
+            display: inline-block;
+            height: 100%;
+            margin: 0 10px;
+            padding: 0 2px;
+            font-size: 12px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        .hidebox-logo .provinces span:hover {
+            color: #f21c1c;
+        }
+
+        .hidebox-logo .area {
+            padding: 5px 10px;
+        }
+
+        .hidebox-logo .area ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .hidebox-logo .area ul li {
+            width: 16.6%;
+            height: 35px;
+            font-size: 12px;
+            line-height: 35px;
+            color: #333333;
+            cursor: pointer;
+        }
+        .hidebox-logo .area ul li:hover{
+            color: #f21c1c;
+        }
+    </style>
+<!-- </head> -->
+
+<!-- <body> -->
+    <div id="logo">
+        <div class="logo-top">
+            <div class="logo-img">
+                <a href="index.html"><img src="images/new-logo.png" width="100px" height="50px"></a>
+            </div>
+            <div class="local">
+                <div class="city">
+                    <h3>白云区</h3>
+                    <div class="hidebox-logo">
+                        <div class="title">
+                            <ul class="title-l">
+                                <li>热门城市：</li>
+                                <li>昆明</li>
+                                <li>大理</li>
+                                <li>贵阳</li>
+                                <li>长沙</li>
+                                <li>曲靖</li>
+                                <li>蒙自</li>
+                            </ul>
+                            <span class="title-r">X</span>
+                        </div>
+                        <div class="provinces">
+                            <span>广东省</span>
+                            <span>广州市</span>
+                            <span>请选择</span>
+                        </div>
+                        <div class="area">
+                            <ul>
+                                <li>广州市区</li>
+                                <li>荔湾区</li>
+                                <li>越秀区</li>
+                                <li>海珠区</li>
+                                <li>天河区</li>
+                                <li>白云区</li>
+                                <li>黄埔区</li>
+                                <li>番禺区</li>
+                                <li>花都区</li>
+                                <li>南沙区</li>
+                                <li>萝岗区</li>
+                                <li>增城市</li>
+                                <li>从化市</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="images/icon/zhijiao.png" width="8px" height="8px">
+                </div>
+                <p><a href="###">全场免费配送</a></p>
+            </div>
+        </div>
+        <div class="logo-bottom">
+            <div class="all-menu">
+                <h2>全部商品分类</h2>
+            </div>
+        </div>
+    </div>
+<!-- </body> -->
+<!-- <script src="lib/jquery-1.10.1.min.js"></script> -->
+<!-- <script src="lib/menu.js"></script> -->
+<script>
+    (function () {
+        quickMenu({ ele: '.city' });
+        $('.city .title-r').click(function () {
+            $('.city .hidebox-logo').css('display', 'none');
+        })
+    })();
+</script>
+
+<!-- </html> -->

@@ -1,0 +1,20 @@
+
+.usertable.thead th:nth-child(1){
+    width: 40px;
+}
+.usertable.thead th:nth-child(2){
+    width: 150px;
+}
+.usertable.thead th:nth-child(3){
+    width: 300px;
+}
+.usertable.thead th:nth-child(4){
+    width: 300px;
+}
+.usertable.thead th:nth-child(5){
+    width: calc(100% - 1240);
+}
+.usertable.thead th:nth-child(6){
+    width: 300px;
+}
+

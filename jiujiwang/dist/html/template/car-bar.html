@@ -1,0 +1,423 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css/base.css"> -->
+<style>
+    #car-bar {
+        width: 220px;
+        height: 145px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .car {
+        width: 160px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 25px;
+        background-color: #fff;
+    }
+
+    .car .thecar {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .car .thecar::after {
+        bottom: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .car .thecar span {
+        display: block;
+    }
+
+    .car .thecar span:nth-child(2) {
+        font-size: 12px;
+        color: #333333;
+        margin: 0 5px;
+    }
+
+    .car .thecar span:nth-child(3) {
+        font-size: 12px;
+        color: #333333;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        background-color: #f21c1c;
+        color: #fff;
+        border-radius: 14px;
+    }
+
+    .car .hidebox-car {
+        position: absolute;
+        top: 39px;
+        right: 0px;
+        display: none;
+        z-index: 2;
+        width: 300px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    .car:hover .thecar {
+        border-bottom-color: #fff;
+    }
+
+    .car:hover .hidebox-car {
+        display: block;
+    }
+
+    .hidebox-car .car-none {
+        padding: 30px 0;
+        /* display: none; */
+    }
+
+    .hidebox-car .car-none img {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        display: block;
+    }
+
+    .hidebox-car .car-none p {
+        font-size: 12px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .hidebox-car .car-goodslist ul li {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hidebox-car .car-goodslist ul li img {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #eee;
+        cursor: pointer;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox {
+        width: 205px;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h3 {
+        font-size: 12px;
+        color: #333;
+        width: 100%;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h3:hover {
+        color: #f21c1c;
+        text-decoration: underline;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 span {
+        font-size: 14px;
+        color: #f21c1c;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 i {
+        font-size: 12px;
+        color: #333;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 .cutgoods {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        background: #f5f5f5;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 .goodsnum {
+        width: 30px;
+        height: 20px;
+        border: 1px solid #dfdfdf;
+        margin: 0 3px;
+        text-align: center;
+        font-size: 12px;
+        color: #333;
+        line-height: 20px;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 .addgoods {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        background: #f5f5f5;
+        cursor: pointer;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 .delgoods {
+        font-size: 12px;
+        color: #f21c1c;
+        margin-left: 8px;
+        display: none;
+    }
+
+    .hidebox-car .car-goodslist .tool-pricebox h4 .delgoods:hover {
+        text-decoration: underline;
+    }
+
+    .hidebox-car .car-goodslist ul li:hover .delgoods {
+        display: block;
+    }
+
+    .hidebox-car .car-goodslist #total {
+        margin-top: 20px;
+        border-top: 1px solid #dfdfdf;
+        padding: 10px 0;
+    }
+
+    .hidebox-car .car-goodslist #total p {
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .hidebox-car .car-goodslist #total p i {
+        color: #f21c1c;
+        margin: 0 3px;
+    }
+
+    .hidebox-car .car-goodslist #total .jiesuan {
+        width: 270px;
+        height: 35px;
+        margin: 15px auto;
+        text-align: center;
+        background-color: #f21c1c;
+        line-height: 35px;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+<!-- </head> -->
+
+<!-- <body> -->
+<div id="car-bar">
+    <div class="car">
+        <div class="thecar">
+            <span>
+                <img src="images/icon/car.png" width="16px" height="14px">
+            </span>
+            <span>购物车</span>
+            <span class="car-num">0</span>
+        </div>
+        <div class="hidebox-car">
+            <div class="car-none">
+                <img src="images/bigcar.png">
+                <p>购物车里还没有商品</p>
+            </div>
+            <div id="car-goodslist" class="car-goodslist">
+                <ul>
+                    <!-- <li>
+                        <img src="https://img2.ch999img.com/newstatic/1526/eebc499de6a54d.jpg">
+                        <div class="tool-pricebox">
+                            <h3>米家互联网空调C1 三级能效 白色 </h3>
+                            <h4>
+                                <span>￥2300.00</span><i>×</i><input type="button" id="cutgoods" value="-">
+                                <div id="goodsnum"></div><input type="button" id="addgoods" value="+"><a href="###"
+                                    id="delgoods">删除</a>
+                            </h4>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </body> -->
+<!-- <script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/menu.js"></script> -->
+<script>
+    (function () {
+        let name = getCookie('name');
+
+        // $('.thecar').mouseenter(function () {
+        //     sildeCar();
+        // })
+
+        function sildeCar() {
+            if (name) {
+                carinf();
+            }
+        }
+        carinf();
+
+        function carinf() {
+            $.ajax({
+                type: 'get',
+                url: 'api/order.php',
+                data: {
+                    ordertype: 'carinf',
+                    order: `SELECT gidnum FROM usename WHERE name = '${name}'`,
+                },
+                success: (str) => {
+                    let newStr = JSON.parse(str)[0].gidnum;
+                    let finalStr = newStr.slice(0, -4);
+                    // console.log(finalStr);
+                    if (finalStr) {
+                        $('.car-none').hide();
+                        let arr = finalStr.split(',');
+                        // console.log(arr);
+                        let finalOrder = '';
+                        let finalArr = [];
+                        arr.forEach(function (item) {
+                            let uid = item.split('x')[0];
+                            let num = item.split('x')[1];
+                            let order = `SELECT * FROM taobao WHERE id = ${uid} UNION `;
+                            finalOrder += order;
+                            finalArr.push(num);
+                        });
+                        // console.log(finalArr);
+                        let sendOrder = finalOrder.slice(0, -6);
+                        detailinf(sendOrder, finalArr);
+                    }
+                    else {
+                        $('.car-none').show();
+                    }
+                }
+            });
+
+            function detailinf(sendOrder, finalArr) {
+                $.ajax({
+                    type: 'get',
+                    url: 'api/order.php',
+                    data: {
+                        ordertype: 'carinf',
+                        order: sendOrder,
+                    },
+                    success: str => {
+                        let arr = JSON.parse(str);
+                        // console.log(arr);
+                        let html = arr.map(function (item, index) {
+                            return `
+
+                            <li data-id="${item.id}">
+                                <img src="${item.pt}">
+                                <div class="tool-pricebox">
+                                    <h3>${item.b2p1}</h3>
+                                    <h4>
+                                        <span>￥${item.b1s}</span><i>×</i><input type="button" class="cutgoods" value="-"><div class="goodsnum" index="${index}">${finalArr[index]}</div><input type="button" class="addgoods" value="+"><a href="###"
+                                            class="delgoods">删除</a>
+                                    </h4>
+                                </div>
+                            </li>
+                            `
+                        });
+                        let html2 = `
+                                    <div id="total">
+                                        <p>共<i>${arr.length}</i>件商品</p>
+                                        <div class="jiesuan">去结算</div>
+                                    </div>
+                                    `
+                        $('.car-goodslist ul').html(html.join('') + html2);
+                        $('.car-num').html($('.car-goodslist ul li').length);
+
+                        $('.car-goodslist ul .cutgoods').click(function () {
+                            let thisnum = $(this).next().html();
+                            let cut = --thisnum;
+                            if (cut <= 1) {
+                                cut = 1;
+                            }
+                            $(this).next().html(cut);
+                            changenum();
+                        })
+
+                        $('.car-goodslist ul .addgoods').click(function () {
+                            let inx = $(this).prev().attr('index');
+                            let thisnum = $(this).prev().html();
+                            let add = ++thisnum;
+                            if (add >= arr[inx].stock) {
+                                add = arr[inx].stock;
+                            }
+                            $(this).prev().html(add);
+                            changenum();
+                        })
+
+                        $('.car-goodslist ul .delgoods').click(function () {
+                            let cfm = confirm('您确定要移除改商品吗？');
+                            if (cfm) {
+                                $(this).parent().parent().parent().remove();
+                                $('#total i').html($('.car-goodslist ul li').length);
+                                // $('.car-num').html(len);
+                            }
+                            changenum();
+                        })
+
+                        function changenum() {
+                            let gidstr = '';
+                            $('.car-goodslist ul li').each(function (index, item) {
+                                gidstr += `${$(item).attr('data-id')}x${$('.car-goodslist ul li .goodsnum').eq(index).html()},`
+                            });
+                            sendgidstr = gidstr + '0x0';
+                            // console.log(sendgidstr)
+                            $.ajax({
+                                type: 'post',
+                                url: 'api/order/php',
+                                data: {
+                                    ordertype: 'cutoradd',
+                                    order: `UPDATE usename SET gidnum = '${sendgidstr}' WHERE name = '${name}';`
+                                },
+                                success: str => {
+                                }
+                            })
+                        }
+
+                        $('.jiesuan').click(function () {
+                            if (name) {
+                                window.open('buy.html');
+                            }
+                            else {
+                                alert('请先登录');
+                            }
+                        })
+                    }
+                })
+            };
+        }
+
+    })();
+</script>
+
+<!-- </html> -->

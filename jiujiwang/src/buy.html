@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九机网</title>
+    <link rel="stylesheet" href="css/reset.css/base.css">
+    <style>
+        .content {
+            width: 1200px;
+            margin: auto;
+        }
+
+        #top-bar {
+            position: relative;
+            z-index: 30;
+        }
+
+        #buy-header .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #buy-header img:nth-child(1) {
+            width: 100px;
+            height: 50px;
+        }
+
+        #buy-header img:nth-child(2) {
+            width: 360px;
+            height: 100px;
+        }
+
+        #buy-con .buy-list .car-none {
+            padding: 30px;
+            display: none;
+        }
+
+        #buy-con .buy-list .car-none img {
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        #buy-con .buy-list .car-none p {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #buy-con .buy-list ul li {
+            display: flex;
+            height: 110px;
+            padding: 15px 20px;
+            border: 1px solid #dfdfdf;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        #buy-con .buy-list ul li input {
+            width: 16px;
+            height: 16px;
+        }
+
+        #buy-con .buy-list ul li img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        #buy-con .buy-list ul li p {
+            width: 400px;
+            font-size: 12px;
+            color: #333;
+            /* height: 15px; */
+            line-height: 15px;
+            cursor: pointer;
+        }
+
+        #buy-con .buy-list ul li i {
+            font-size: 12px;
+            color: #333;
+            font-weight: bold;
+            height: 15px;
+            line-height: 15px;
+            display: block;
+            width: 56px;
+        }
+
+        #buy-con .buy-list ul li input {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #dfdfdf;
+            background-color: #f5f5f5;
+            float: left;
+            cursor: pointer;
+        }
+
+        #buy-con .buy-list ul li .goodsnum {
+            width: 30px;
+            height: 18px;
+            border: 1px solid #dfdfdf;
+            background-color: rgb(235, 235, 228);
+            text-align: center;
+            float: left;
+            margin: 0 3px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        #buy-con .buy-list ul li h3 {
+            font-size: 12px;
+            color: #f21c1c;
+            font-weight: bold;
+            width: 56px;
+            height: 15px;
+            line-height: 15px;
+        }
+
+        #buy-con .buy-list ul li a {
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+            display: block;
+            color: #333;
+        }
+
+        #buy-con .buy-list ul li a:hover {
+            color: #f21c1c;
+            text-decoration: underline;
+        }
+
+        #buy-con .buy-list ul li p:hover {
+            color: #f21c1c;
+            text-decoration: underline;
+        }
+
+
+        #buy-con .buy-title {
+            height: 18px;
+            padding: 15px 20px;
+        }
+
+        #buy-con .buy-title span {
+            float: left;
+            font-size: 12px;
+            display: block;
+            height: 18px;
+        }
+
+        #buy-con .buy-title input {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        #buy-con .buy-title span:nth-child(2) {
+            margin-left: 60px;
+            width: 260px;
+        }
+
+        #buy-con .buy-title span:nth-child(3) {
+            width: 340px;
+        }
+
+        #buy-con .buy-title span:nth-child(4) {
+            width: 165px;
+        }
+
+        #buy-con .buy-title span:nth-child(5) {
+            width: 120px;
+        }
+
+        #buy-con .buy-title span:nth-child(6) {
+            width: 135px;
+        }
+
+        #buy-con .buy-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            background-color: #f5f5f5;
+        }
+
+        #buy-con .buy-bottom span {
+            display: block;
+            height: 100%;
+        }
+
+        #buy-con .buy-bottom span:nth-child(1) {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 50px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        #buy-con .buy-bottom span:nth-child(1):hover {
+            color: #f21c1c;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) {
+            display: flex;
+            align-items: center;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) h4 {
+            font-size: 12px;
+            line-height: 50px;
+            color: #333;
+            margin-right: 20px;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) h4 i {
+            font-size: 16px;
+            line-height: 50px;
+            color: #f21c1c;
+            margin: 0 10px;
+            font-weight: bold;
+            height: 50px;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) h3 {
+            font-size: 12px;
+            line-height: 50px;
+            color: #333;
+            margin-right: 20px;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) h3 i {
+            font-size: 20px;
+            color: #f21c1c;
+            line-height: 50px;
+            font-weight: bold;
+            height: 50px;
+        }
+
+        #buy-con .buy-bottom span:nth-child(2) .pay {
+            width: 92px;
+            height: 50px;
+            background-color: #f21c1c;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jiuji-buy">
+        <div id="top-bar"></div>
+        <div id="buy-header">
+            <div class="content">
+                <a href="index.html"><img src="images/new-logo.png" alt=""></a>
+                <img src="images/buy/img1.png" alt="">
+            </div>
+        </div>
+        <div id="buy-con">
+            <div class="content">
+                <div class="buy-title">
+                    <span><input type="checkbox" class="allcheck">全选</span>
+                    <span>商品图片</span>
+                    <span>商品</span>
+                    <span>单价（元）</span>
+                    <span>数量</span>
+                    <span>小计（元）</span>
+                    <span>操作</span>
+                </div>
+                <div class="buy-list">
+                    <div class="car-none">
+                        <img src="images/bigcar.png">
+                        <p>购物车里还没有商品</p>
+                    </div>
+                    <ul>
+                        <!-- <li>
+                            <span><input type="checkbox"></span>
+                            <span><img src="https://img2.ch999img.com/newstatic/1526/eebc499de6a54d.jpg"></span>
+                            <span>
+                                <p>米家互联网空调C1 三级能效 白色 </p>
+                            </span>
+                            <span>
+                                <i>￥2300.00</i>
+                            </span>
+                            <span class="clearfix">
+                                <input type="button" class="cutgoods" value="-">
+                                <div class="goodsnum">1</div>
+                                <input type="button" class="addgoods" value="+">
+                            </span>
+                            <span>
+                                <h3>3299.00</h3>
+                            </span>
+                            <span><a href="###" class="delgoods">删除</a></span>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="buy-bottom">
+                    <span class="delall">
+                        删除选中
+                    </span>
+                    <span>
+                        <h4>已选商品<i class="totalgoods">3</i>件</h4>
+                        <h3>总计（不含运费）：<i class="totalprice">1290.00</i></h3>
+                        <div class="pay">结算</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+<script src="lib/jquery-1.10.1.min.js"></script>
+<script src="lib/Ray-common.js"></script>
+<script>
+    (function () {
+        let name = getCookie('name');
+        //顶部菜单
+        $('#top-bar').load('html/template/top-bar.html', function () {
+            islogin();
+        });
+        function islogin() {
+            let name = getCookie('name');
+            if (name) {
+                $('#setname1').html(name);
+                $('#loginorquit1').html('退出');
+            }
+            else {
+                $('#setname1').html('欢迎来九机！');
+                $('#loginorquit1').html('登录');
+            }
+            $('#loginorquit1').click(function () {
+                if ($('#loginorquit1').html() == '退出') {
+                    removeCookie('name');
+                    $('#loginorquit1').html('登录');
+                    $('#loginorquit1').attr('href','');
+                }
+                else if ($('#loginorquit1').html() == '登录') {
+                    $('#loginorquit1').attr('href','###');
+                    localStorage.url = location.href;
+                    location.href = 'login.html';
+                }
+                islogin();
+            });
+        }
+
+        //底部
+        $('#footer').load('html/template/footer.html', function () {
+
+        });
+
+        carinf();
+        function sildeCar() {
+            if (name) {
+                carinf();
+            }
+            else {
+                let gologin = `<li><a href="login.html" style="color: #f21c1c">登录后可查看购物车</a></li>`
+                $('.buy-list ul').html(gologin);
+            }
+        }
+
+        function carinf() {
+            $.ajax({
+                type: 'get',
+                url: 'api/order.php',
+                data: {
+                    ordertype: 'carinf',
+                    order: `SELECT gidnum FROM usename WHERE name = '${name}'`,
+                },
+                success: (str) => {
+                    let newStr = JSON.parse(str)[0].gidnum;
+                    let finalStr = newStr.slice(0, -4);
+                    // console.log(finalStr);
+                    if (finalStr) {
+                        $('.car-none').hide();
+                        let arr = finalStr.split(',');
+                        // console.log(arr);
+                        let finalOrder = '';
+                        let finalArr = [];
+                        arr.forEach(function (item) {
+                            let uid = item.split('x')[0];
+                            let num = item.split('x')[1];
+                            let order = `SELECT * FROM taobao WHERE id = ${uid} UNION `;
+                            finalOrder += order;
+                            finalArr.push(num);
+                        });
+                        // console.log(finalArr);
+                        let sendOrder = finalOrder.slice(0, -6);
+                        detailinf(sendOrder, finalArr);
+                    }
+                    else {
+                        $('.car-none').show();
+                    }
+                }
+            });
+
+            function detailinf(sendOrder, finalArr) {
+                $.ajax({
+                    type: 'get',
+                    url: 'api/order.php',
+                    data: {
+                        ordertype: 'carinf',
+                        order: sendOrder,
+                    },
+                    success: str => {
+                        let arr = JSON.parse(str);
+                        console.log(arr);
+                        let html = arr.map(function (item, index) {
+                            return `
+
+                            <li data-id="${item.id}">
+                                <span><input type="checkbox" class="checkbtn"></span>
+                                <span><img src="${item.pt}"></span>
+                                <span>
+                                    <p>${item.b2p1}</p>
+                                </span>
+                                <span>
+                                    <i>${item.b1s}.00</i>
+                                </span>
+                                <span class="clearfix">
+                                    <input type="button" class="cutgoods" value="-">
+                                    <div class="goodsnum" index="${index}">${finalArr[index]}</div>
+                                    <input type="button" class="addgoods" value="+">
+                                </span>
+                                <span>
+                                    <h3 class="total-single"></h3>
+                                </span>
+                                <span><a href="###" class="delgoods">删除</a></span>
+                            </li>
+                            `
+                        });
+
+                        $('.buy-list ul').html(html.join(''));
+
+                        function total() {
+                            $('.total-single').each(function (index, item) {
+                                let total_single = $(item).parent().prev().children('.goodsnum').html() * $(item).parent().prev().prev().children().html()
+                                $(item).html(total_single + '.00')
+                            })
+                            totalprice();
+                        }
+                        total();
+
+                        function totalprice() {
+                            let totalprice = 0;
+                            $('.total-single').each(function (index, item) {
+                                totalprice += ($(item).html() - 0);
+                            })
+                            $('.totalprice').html(totalprice + '.00');
+                        }
+
+                        function totalgoods() {
+                            $('.totalgoods').html($('.buy-list ul li').length);
+                        }
+                        totalgoods();
+
+                        function delall() {
+                            $('.delall').click(function () {
+                                let cfm = confirm('您确定要删除这些商品吗');
+                                if (cfm) {
+                                    let target = $('.checkbtn:checked').parent().parent();
+                                    $(target).remove();
+                                    totalgoods();
+                                    totalprice();
+                                }
+                                changenum();
+                            })
+                        }
+                        delall();
+
+                        $('.buy-list ul .cutgoods').click(function () {
+                            let inx = $(this).next().attr('index');
+                            let thisnum = $(this).next().html();
+                            let cut = --thisnum;
+                            if (cut <= 1) {
+                                cut = 1;
+                            }
+                            $(this).next().html(cut);
+                            changenum();
+                            total()
+                        })
+
+                        $('.buy-list ul .addgoods').click(function () {
+                            let inx = $(this).prev().attr('index');
+                            let thisnum = $(this).prev().html();
+                            let add = ++thisnum;
+                            if (add >= arr[inx].stock) {
+                                add = arr[inx].stock;
+                            }
+                            $(this).prev().html(add);
+                            changenum();
+                            total()
+                        })
+
+                        $('.buy-list ul .delgoods').click(function () {
+                            let cfm = confirm('您确定要移除改商品吗？');
+                            if (cfm) {
+                                $(this).parent().parent().remove();
+                                totalgoods();
+                                totalprice();
+                                changenum();
+                            }
+                        })
+
+                        function changenum() {
+                            let gidstr = '';
+                            $('.buy-list ul li').each(function (index, item) {
+                                gidstr += `${$(item).attr('data-id')}x${$('.buy-list ul li .goodsnum').eq(index).html()},`
+                            });
+                            sendgidstr = gidstr + '0x0';
+                            // console.log(sendgidstr)
+                            $.ajax({
+                                type: 'post',
+                                url: 'api/order/php',
+                                data: {
+                                    ordertype: 'cutoradd',
+                                    order: `UPDATE usename SET gidnum = '${sendgidstr}' WHERE name = '${name}';`
+                                },
+                                success: str => {
+                                }
+                            })
+                        }
+
+
+
+                        function checkit() {
+                            $('.allcheck').click(function () {
+                                let isok = $('.allcheck').prop('checked');
+                                $('.checkbtn').prop('checked', isok);
+                            })
+
+                            $('.checkbtn').click(function () {
+                                let len = $('.checkbtn').length;//原本的个数
+                                let num = $('.checkbtn:checked').length;
+                                if (len == num) {
+                                    //全选了
+                                    $('.allcheck').prop('checked', true);
+                                } else {
+                                    $('.allcheck').prop('checked', false);
+                                }
+                            })
+                        }
+                        checkit();
+                    }
+                })
+            };
+        }
+
+
+    })();
+</script>
+
+</html>

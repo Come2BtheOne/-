@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Microsoft YaHei';
+    padding-top: 15px;
+}
+.content{
+    background: url(../images/reg_bg.png) no-repeat right center;
+    border: solid 8px #f0f0f0;
+    padding-bottom: 50px;
+}
+.log_head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo_left{
+    margin-right: 40px;
+}
+
+.logo_right{
+    width: 162px;
+    height: 36px;
+    font-size: 24px;
+    color: #c80f1e;
+    border-left: 2px solid #d6d6d6;
+    padding-left: 40px;
+}
+
+.con_top{
+    margin-bottom: 30px;
+}
+
+.con_top span{
+    width: 120px;
+    height: 40px;
+    border-top: 2px solid #f0f0f0;
+    display: block;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 40px;
+    color: #999999;
+    text-align: center;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+.con_top .active{
+    border-top: 2px solid #c80f1e;
+    color: #666666;
+    background-color: #fff;
+}
+
+.con_main .hidebox dl{
+    height: 30px;
+    margin-top: 30px;
+}
+
+.con_main .hidebox dt{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.con_main .hidebox dt span:nth-child(1){
+    font-size: 14px;
+    color: #ff3333;
+}
+.con_main .hidebox dt span:nth-child(2){
+    font-size: 14px;
+    line-height: 30px;
+    color: #999999;
+}
+
+.con_main .hidebox dd{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.con_main .hidebox dd p{
+    margin-left: 26px;
+    font-size: 14px;
+    color: #999999;
+}
+
+
+.con_main .hidebox input{
+    width: 350px;
+    height: 28px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 2px #f3f3f3;
+    text-indent: 5px;
+    padding-left: 2px;
+    margin-left: 20px;
+}
+
+
+.con_main .hidebox input[type='text']:focus {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightskyblue,-0.5px -0.5px 0.5px 0.5px lightskyblue;
+}
+.con_main .hidebox input[type='password']:focus {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightskyblue,-0.5px -0.5px 0.5px 0.5px lightskyblue;
+}
+
+
+
+.con_main .hidebox .regbox{
+    margin-top: 50px;
+    margin-left: 110px;
+}
+
+.con_main .hidebox .regbox .reg{
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background-color: #58bc58;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.con_main .hidebox .regbox .empty{
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #c80f1e;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 5px;
+    
+}
+

@@ -1,0 +1,503 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css/base.css"> -->
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    .tool-bar {
+        position: fixed;
+        right: 0;
+        height: 100%;
+        z-index: 40;
+    }
+
+    .aside {
+        position: relative;
+        width: 35px;
+        height: 100%;
+        background-color: #333;
+    }
+
+    .aside .aside-btn1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .aside .aside-btn2 {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aside .aside-btn2:hover {
+        background-color: #c80f1e;
+    }
+
+    .aside .aside-btn2 img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .aside-btn1 li {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .aside-btn1 li h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .aside-btn1 li h4 img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .aside-btn1 li span {
+        position: absolute;
+        transform: translateX(-80px);
+        width: 70px;
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .aside-btn1 li:nth-child(5) span img {
+        position: absolute;
+        right: 0;
+    }
+
+    .aside-btn1 li:nth-child(5) span::after {
+        border-left: 5px solid #fff;
+    }
+
+    .aside-btn1 li span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid #333;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+
+    .aside-btn1 li span>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .aside-con {
+        width: 300px;
+        height: 100%;
+        background-color: #eee;
+        display: none;
+    }
+
+    .aside-con .car-none {
+        padding: 30px 0;
+        display: none;
+    }
+
+    .aside-con .car-none img {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        display: block;
+    }
+
+    .aside-con .car-none p {
+        font-size: 12px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .aside-con .tool-goodslist ul li {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aside-con .tool-goodslist ul li img {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #eee;
+        cursor: pointer;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox {
+        width: 205px;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h3 {
+        font-size: 12px;
+        color: #333;
+        width: 100%;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h3:hover {
+        color: #f21c1c;
+        text-decoration: underline;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 span {
+        font-size: 14px;
+        color: #f21c1c;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 i{
+        font-size: 12px;
+        color: #333;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 .cutgoods {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        background: #f5f5f5;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 .goodsnum {
+        width: 30px;
+        height: 20px;
+        border: 1px solid #dfdfdf;
+        margin: 0 3px;
+        text-align: center;
+        font-size: 12px;
+        color: #333;
+        line-height: 20px;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 .addgoods {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        background: #f5f5f5;
+        cursor: pointer;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 .delgoods {
+        font-size: 12px;
+        color: #f21c1c;
+        margin-left: 8px;
+        display: none;
+    }
+
+    .aside-con .tool-goodslist .tool-pricebox h4 .delgoods:hover {
+        text-decoration: underline;
+    }
+
+    .aside-con .tool-goodslist ul li:hover .delgoods {
+        display: block;
+    }
+
+    .aside-con .tool-goodslist #total{
+        margin-top: 20px;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 10px 0;
+    }
+
+    .aside-con .tool-goodslist #total p{
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+    }
+    .aside-con .tool-goodslist #total p i{
+        color: #f21c1c;
+        margin: 0 3px;
+    }
+
+    .aside-con .tool-goodslist #total .jiesuan{
+        width: 270px;
+        height: 35px;
+        margin: 15px auto;
+        text-align: center;
+        background-color: #f21c1c;
+        line-height: 35px;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+<!-- </head> -->
+
+<!-- <body> -->
+<div class="tool-bar clearfix" id="tool-bar">
+    <div class="aside fl" id="aside">
+        <ul class="aside-btn1">
+            <li>
+                <span>购物车</span>
+                <h4><img src="images/icon/gouwuche.png"></h4>
+            </li>
+            <li>
+                <span>附近门店</span>
+                <h4><img src="images/icon/shangdian.png"></h4>
+            </li>
+            <li>
+                <span>咨询客服</span>
+                <h4><img src="images/icon/erji.png"></h4>
+            </li>
+            <li>
+                <span>投诉建议</span>
+                <h4><img src="images/icon/bijiben.png"></h4>
+            </li>
+            <li>
+                <span><img src="images/wechat.png">
+                </span>
+                <h4><img src="images/icon/weixin.png"></h4>
+            </li>
+            <li>
+                <span>产品对比</span>
+                <h4><img src="images/icon/jiantou.png"></h4>
+            </li>
+        </ul>
+        <div class="aside-btn2" id="aside-btn2">
+            <img src="images/icon/back.png"></h4>
+        </div>
+    </div>
+    <div class="aside-con fl" id="aside-con" style="background: #fff">
+        <div class="car-none">
+            <img src="images/bigcar.png">
+            <p>购物车里还没有商品</p>
+        </div>
+        <div id="tool-goodslist" class="tool-goodslist">
+            <ul>
+                <!-- <li>
+                    <img src="https://img2.ch999img.com/newstatic/1526/eebc499de6a54d.jpg">
+                    <div class="tool-pricebox">
+                        <h3>米家互联网空调C1 三级能效 白色 </h3>
+                        <h4>
+                            <span>￥2300.00</span><i>×</i><input type="button" id="cutgoods" value="-"><div id="goodsnum"></div><input type="button" id="addgoods" value="+"><a href="###"
+                                id="delgoods">删除</a>
+                        </h4>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- </body> -->
+<!-- <script src="../../lib/jquery-1.10.1.min.js"></script>
+<script src="../../lib/menu.js"></script>
+<script src="../../lib/backtotop.js"></script> -->
+<script>
+    (function () {
+        let name = getCookie('name');
+
+        $('#aside li h4').mouseenter(function () {
+            $(this).prev().css({ 'opacity': 1, 'transform': 'translateX(-70px)' })
+            $(this).css('background', '#c80f1e');
+        });
+        $('#aside li').mouseleave(function () {
+            $(this).children().eq(0).css({ 'opacity': 0, 'transform': 'translateX(-80px)' });
+            $(this).children().eq(1).css('background', '#333');
+        });
+        $('#aside li').click(function () {
+            $('#aside-con').show(300);
+            sildeCar();
+        });
+        $('#tool-bar').siblings().click(function () {
+            $('#aside-con').hide(300);
+        });
+
+        backTopSlow({
+            id: 'aside-btn2',
+            setSpeed: 100,
+            setTime: 10,
+        });
+
+
+
+        function sildeCar() {
+            if (name) {
+                carinf();
+            }
+            else {
+                let gologin = `<li><a href="login.html" style="color: #f21c1c">登录后可查看购物车</a></li>`
+                $('#tool-goodslist ul').html(gologin);
+            }
+        }
+
+        function carinf() {
+            $.ajax({
+                type: 'get',
+                url: 'api/order.php',
+                data: {
+                    ordertype: 'carinf',
+                    order: `SELECT gidnum FROM usename WHERE name = '${name}'`,
+                },
+                success: (str) => {
+                    let newStr = JSON.parse(str)[0].gidnum;
+                    let finalStr = newStr.slice(0, -4);
+                    // console.log(finalStr);
+                    if (finalStr) {
+                        $('.car-none').hide();
+                        let arr = finalStr.split(',');
+                        // console.log(arr);
+                        let finalOrder = '';
+                        let finalArr = [];
+                        arr.forEach(function (item) {
+                            let uid = item.split('x')[0];
+                            let num = item.split('x')[1];
+                            let order = `SELECT * FROM taobao WHERE id = ${uid} UNION `;
+                            finalOrder += order;
+                            finalArr.push(num);
+                        });
+                        // console.log(finalArr);
+                        let sendOrder = finalOrder.slice(0, -6);
+                        detailinf(sendOrder, finalArr);
+                    }
+                    else {
+                        $('.car-none').show();
+                    }
+                }
+            });
+
+            function detailinf(sendOrder, finalArr) {
+                $.ajax({
+                    type: 'get',
+                    url: 'api/order.php',
+                    data: {
+                        ordertype: 'carinf',
+                        order: sendOrder,
+                    },
+                    success: str => {
+                        let arr = JSON.parse(str);
+                        console.log(arr);
+                        let html = arr.map(function (item, index) {
+                            return `
+
+                            <li data-id="${item.id}">
+                                <img src="${item.pt}">
+                                <div class="tool-pricebox">
+                                    <h3>${item.b2p1}</h3>
+                                    <h4>
+                                        <span>￥${item.b1s}</span><i>×</i><input type="button" class="cutgoods" value="-"><div class="goodsnum" index="${index}">${finalArr[index]}</div><input type="button" class="addgoods" value="+"><a href="###"
+                                            class="delgoods">删除</a>
+                                    </h4>
+                                </div>
+                            </li>
+                            `
+                        });
+                        let html2 = `
+                                    <div id="total">
+                                        <p>共<i>${arr.length}</i>件商品</p>
+                                        <div class="jiesuan">去结算</div>
+                                    </div>
+                                    `
+                        $('#tool-goodslist ul').html(html.join('') + html2);
+
+                        $('#tool-goodslist ul .cutgoods').click(function () {
+                            let thisnum = $(this).next().html();
+                            let cut = --thisnum;
+                            if (cut <= 1) {
+                                cut = 1;
+                            }
+                            $(this).next().html(cut);
+                            changenum();
+                        })
+
+                        $('#tool-goodslist ul .addgoods').click(function () {
+                            let inx = $(this).prev().attr('index');
+                            let thisnum = $(this).prev().html();
+                            let add = ++thisnum;
+                            if (add >= arr[inx].stock) {
+                                add = arr[inx].stock;
+                            }
+                            $(this).prev().html(add);
+                            changenum();
+                        })
+
+                        $('#tool-goodslist ul .delgoods').click(function () {
+                            let cfm = confirm('您确定要移除改商品吗？');
+                            if (cfm) {
+                                $(this).parent().parent().parent().remove();
+                            }
+                            changenum();
+                            $('#total i').html($('#tool-goodslist ul li').length);
+                        })
+
+                        function changenum() {
+                            let gidstr = '';
+                            $('#tool-goodslist ul li').each(function (index, item) {
+                                gidstr += `${$(item).attr('data-id')}x${$('#tool-goodslist ul li .goodsnum').eq(index).html()},`
+                            });
+                            sendgidstr = gidstr + '0x0';
+                            // console.log(sendgidstr)
+                            $.ajax({
+                                type: 'post',
+                                url: 'api/order/php',
+                                data: {
+                                    ordertype: 'cutoradd',
+                                    order: `UPDATE usename SET gidnum = '${sendgidstr}' WHERE name = '${name}';`
+                                },
+                                success: str => {
+                                }
+                            })
+                        }
+
+                        $('.jiesuan').click(function () {
+                            if (name) {
+                                window.open('buy.html');
+                            }
+                            else {
+                                alert('请先登录');
+                            }
+                        })
+                    }
+                })
+            };
+        }
+
+
+
+    })();
+</script>
+
+<!-- </html> -->

@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.head{
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    background-color: #f5f5f5;
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+.head .nav{
+    height: 40px;
+    margin-left: 406px;
+    margin-right: 20px;
+}
+
+.head .quit{
+    height: 40px;
+    cursor: pointer;
+}
+
+.head .quit:hover{
+    color: orangered;
+}
+
+.main {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.list {
+    height: auto;
+    width: 90%;
+    list-style: none;
+    margin: auto;
+    z-index: 3;
+}
+
+.list li {
+    float: left;
+    width: 250px;
+    height: 400px;
+    margin-right: 22px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.list li:hover {
+    border-color: orangered;
+}
+
+.list li:hover .box5 {
+    display: block;
+}
+
+.photo {
+    margin-bottom: 10px;
+}
+
+.photo .p-t {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.photo .p-t img {
+    width: 250px;
+    height: 250px;
+}
+
+.photo .p-b {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.photo .p-b img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+}
+
+.photo .p-b img:hover {
+    border-color: orangered;
+}
+
+.box1 {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 strong {
+    font-size: 18px;
+    line-height: 18px;
+    color: orangered;
+}
+
+.box1 h6 {
+    color: #888888;
+    font-weight: normal;
+}
+
+.box2 {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.box2 p {
+    font-size: 12px;
+}
+
+.box2 p:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+
+.box3 {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box3 span:nth-child(1) {
+    display: flex;
+}
+
+.box3 span:nth-child(2) {
+    font-size: 12px;
+    line-height: 12px;
+    color: #888888;
+}
+
+.box3 img {
+    height: 12px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.box3 h6 {
+    font-size: 12px;
+    line-height: 12px;
+    color: #888888;
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.box3 h6:hover {
+    color: orangered;
+}
+
+.box4 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+}
+
+.box4 img {
+    cursor: pointer;
+}
+
+.box5 {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    height: 30px;
+    width: 250px;
+    background-color: rgba(255, 44, 0, 0.77);
+    display: none;
+    cursor: pointer;
+}
+
+.box5 span:nth-child(1) {
+    color: #888888;
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    border-right: 0.5px solid rgba(204, 204, 204, 0.514);
+    box-sizing: border-box;
+}
+
+.box5 span:nth-child(2) {
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+
+.btnbox_t {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.btnbox_t .box {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    float: left;
+}
+
+.btnbox_t .box .price {
+    width: 60px;
+    height: 30px;
+}
+
+.btnbox_t .box .highlow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+    background-color: #fff;
+    display: none;
+    border: 1px solid #ccc;
+}
+
+.btnbox_t .box .highlow .htol {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.btnbox_t .box .highlow .ltoh {
+    cursor: pointer;
+}
+
+.btnbox_t .box .highlow>div:hover{
+    background-color: orangered;
+}
+
+.btnbox_t .price_min {
+    width: 120px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.btnbox_t .price_max {
+    width: 120px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.btnbox_t .price_btn {
+    width: 40px;
+    height: 30px;
+}
+
+.btnbox_t .search_btn {
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.btnbox_t .search {
+    margin-left: 845px;
+    width: 350px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.pages{
+    margin: 0px 100px;
+}
+
+.pages a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #C2C2C2;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+.pages .active {
+    background: lightcoral;
+}
+
+.footprint{
+    width: 1350px;
+    border: 1px solid #ccc;
+    margin: auto;
+}
+
+.footprint h3{
+    padding:0 25px;
+}
+
+.footlist{
+    padding: 5px 25px;
+}
+
+.footlist li{
+    width: 200px;
+    height: 300px;
+    float: left;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.footlist li:nth-child(6n){
+    margin-right: 0;
+}
+
+.footlist li:hover{
+    border-color: orangered;
+}
+
+.footlist li img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.footlist li h4{
+    color: orangered;
+    margin:8px 8px 5px 8px;
+}
+
+.footlist li p{
+    margin: 0 8px 8px 8px;
+    font-size: 12px;
+}
+
+.footlist li p:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+
+.reload{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #999;
+}
+.reload:hover{
+    color: orangered;
+    border-color: orangered;
+}

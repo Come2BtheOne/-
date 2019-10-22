@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+    font-family: 'Microsoft YaHei';
+    padding-top: 15px;
+}
+.content{
+    background: url(../images/reg_bg.png) no-repeat right center;
+    border: solid 8px #f0f0f0;
+    padding-bottom: 150px;
+}
+.log_head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo_left{
+    margin-right: 40px;
+}
+
+.logo_right{
+    width: 162px;
+    height: 36px;
+    font-size: 24px;
+    color: #c80f1e;
+    border-left: 2px solid #d6d6d6;
+    padding-left: 40px;
+}
+
+.con_top span{
+    width: 105px;
+    height: 40px;
+    border-top: 2px solid #f0f0f0;
+    display: block;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 40px;
+    color: #999999;
+    text-align: center;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+.con_top .active{
+    border-top: 2px solid #c80f1e;
+    color: #666666;
+    background-color: #fff;
+}
+.con_top .con_r{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.con_top .con_r p{
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.con_top .con_r .login{
+    width: 28px;
+    height: 20px;
+    background-color: #99cc33;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.con_main .hidebox dl{
+    height: 30px;
+    margin-top: 18px;
+}
+
+.con_main .hidebox dt{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.con_main .hidebox dt span:nth-child(1){
+    font-size: 12px;
+    color: #ff3333;
+}
+.con_main .hidebox dt span:nth-child(2){
+    font-size: 12px;
+    line-height: 30px;
+    color: #999999;
+}
+
+.con_main .hidebox dd{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.con_main .hidebox dd p{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #999999;
+}
+
+
+.con_main .hidebox input{
+    width: 240px;
+    height: 28px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 2px #f3f3f3;
+    text-indent: 5px;
+    padding-left: 2px;
+    margin-left: 10px;
+}
+
+
+.con_main .hidebox input[type='text']:focus {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightskyblue,-0.5px -0.5px 0.5px 0.5px lightskyblue;
+}
+.con_main .hidebox input[type='password']:focus {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightskyblue,-0.5px -0.5px 0.5px 0.5px lightskyblue;
+}
+
+.con_main .hidebox .deal{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.con_main .hidebox .deal input{
+    width: 13px;
+    height: 13px;
+}
+
+.con_main .hidebox .deal h4{
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    margin: 0 5px;
+}
+.con_main .hidebox .deal a{
+    color: #3399ff;
+    font-size: 12px;
+    line-height: 16px;
+}
+.con_main .hidebox .deal a:hover{
+    text-decoration: underline;
+}
+.con_main .hidebox .reg{
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #c80f1e;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin-left: 110px;
+    border-radius: 3px;
+    margin-top: 20px;
+}

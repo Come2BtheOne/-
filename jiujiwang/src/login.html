@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <link rel="stylesheet" href="css/reset.css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div id="jiuji-login">
+        <div id="login-main">
+            <div class="welcome">
+                <a href="index.html">
+                    <img src="images/new-logo.png" width="100px" height="50px">
+                </a>
+                <span>欢迎登录</span>
+            </div>
+            <div class="wrap">
+                <div class="con">
+                    <a href="###"></a>
+                    <div class="loginbox">
+                        <div class="loginbox-t">
+                            <span class="active"><a href="###">账户登录</a></span>
+                            <i></i>
+                            <span><a href="###">扫码登录</a></span>
+                        </div>
+
+                        <div class="loginbox-c">
+
+                            <div class="hidebox hide1" style="display: block">
+                                <div class="usn inpbox"><img src="images/login/usn.png" width="17px"
+                                        height="19px"><input type="text" placeholder="用户名" id="username"></div>
+                                <div class="psw inpbox"><img src="images/login/psw.png" width="17px"
+                                        height="19px"><input type="password" placeholder="密码" id="password"></div>
+                                <h3>
+                                    <a href="###"><img src="images/login/usn-little.png" width="10px"
+                                            height="12px">手机验证码登录</a>
+                                    <a href="###">找回密码</a>
+                                </h3>
+                                <input type="button" id="submit" value="登录">
+                            </div>
+
+                            <div class="hidebox hide2" style="display: none">
+                                <div class="erweima">
+                                    <img src="images/login/erweima.png" width="140px" height="140px">
+                                </div>
+                                <div class="saomiao">
+                                    <span><img src="images/login/saomiao.png" width="16px" height="16px"></span>
+                                    <span>打开</span>
+                                    <span><a href="###">九机APP</a></span>
+                                    <span>扫码登录</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="loginbox-b">
+                            <h4>
+                                <a href="reg.html">立即注册</a>
+                                <img src="images/login/jiantou.png" width="15.5px" height="15.5px">
+                            </h4>
+                            <div class="line">
+                                <span>其他方式登录九机</span>
+                            </div>
+                            <div class="otherway">
+                                <span>
+                                    <a href="###"><img src="images/login/qq.png" width="24px" height="24px">QQ</a>
+                                    <i></i>
+                                    <a href="###"><img src="images/login/wechat.png" width="24px" height="24px">微信</a>
+                                </span>
+                                <span>
+                                    <h5>三个月内免登录</h5>
+                                    <div class="month3" isok="false">
+                                        <p></p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="login-footer">
+            <div class="foot-b">
+                <div class="content">
+                    <div class="foot-nav">
+                        <a href="###">常见问题</a>
+                        <i>|</i>
+                        <a href="###">供应商申请</a>
+                        <i>|</i>
+                        <a href="###">配送服务</a>
+                        <i>|</i>
+                        <a href="###">招聘信息</a>
+                        <i>|</i>
+                        <a href="###">关于我们</a>
+                        <i>|</i>
+                        <a href="###">联系我们</a>
+                        <i>|</i>
+                        <a href="###">投诉建议</a>
+                        <i>|</i>
+                        <a href="###">地区报价</a>
+                        <i>|</i>
+                        <a href="###">IT服务</a>
+                    </div>
+                    <div class="foot-con">
+                        <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939
+                            &nbsp;&nbsp;&nbsp;&nbsp;工作时间：周一至周日 09:00-21:30</p>
+                        <p>网站ICP备案号：<a href="###">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp;电信业务经营许可证：滇B2-20180054号
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="###">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
+                        <p>Copyright © 2006 - 2019 九机网 All Rights Reserved</p>
+                        <p>云南九机信息技术有限公司版权所有</p>
+                    </div>
+                    <div class="foot-img">
+                        <a href="###"><img src="images/foot/foot2-1.jpg"></a>
+                        <a href="###"><img src="images/foot/foot2-2.png"></a>
+                        <a href="###"><img src="images/foot/foot2-3.png"></a>
+                        <a href="###"><img src="images/foot/foot2-4.png"></a>
+                        <a href="###"><img src="images/foot/foot2-5.png"></a>
+                        <a href="###"><img src="images/foot/foot2-6.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert" style="display:none">
+            <h2>消息</h2>
+            <div class="alert_con">
+                <p id="ts"></p>
+                <p style="line-height:70px"><a class="btn">确定</a></p>
+            </div>
+        </div>
+        <div id="cover" class="cover"></div>
+    </div>
+
+</body>
+
+<script src="lib/jquery-1.10.1.min.js"></script>
+<script src="lib/Ray-common.js"></script>
+<script>
+    (function () {
+
+        $('.month3').click(function () {
+            if ($('.month3').attr('isok') == 'false') {
+                $('.month3').children().eq(0).animate({ 'left': 21 }, 300);
+                $('.month3').attr('isok', 'true');
+                $('.month3').css({ 'background-color': '#f21c1c', 'border-color': '#f21c1c' })
+            }
+            else {
+                $('.month3').children().eq(0).animate({ 'left': 1 }, 300);
+                $('.month3').attr('isok', 'false');
+                $('.month3').css({ 'background-color': '#dcdfe6', 'border-color': '#dcdfe6' })
+            }
+        })
+
+        $('.loginbox-t span').click(function () {
+            $('.loginbox-t span').removeClass('active');
+            $(this).addClass('active');
+            $('.loginbox-c .hidebox').css('display', 'none');
+            if ($(this).index() == 0) {
+                $('.loginbox-c .hidebox').eq(0).css('display', 'block');
+            }
+            else if ($(this).index() == 2) {
+                $('.loginbox-c .hidebox').eq(1).css('display', 'block');
+            }
+        });
+
+
+        $('#username').keyup(function () {
+            checkit();
+        })
+        $('#password').keyup(function () {
+            checkit();
+        })
+
+        function checkit() {
+            let usn_val = $('#username').val();
+            let psw_val = $('#password').val();
+            if (usn_val && psw_val) {
+                $('#submit').css('background', '#f21c1c');
+            }
+            else {
+                $('#submit').css('background', '#dfdfdf');
+            }
+        }
+
+        $('#submit').click(function () {
+            let usn = $('#username').val();
+            let psw = $('#password').val();
+            if (!usn || !psw) {
+                $('#ts').html('用户名或密码不能为空~');
+                is_show();
+            }
+            else {
+                login();
+            }
+        });
+
+        function login() {
+            $.ajax({
+                type: 'post',
+                url: 'api/order.php',
+                data: {
+                    ordertype: 'login',
+                    order: `SELECT * FROM usename WHERE name='${$('#username').val()}' AND password='${$('#password').val()}'`,
+                },
+                success: (str) => {
+                    if (str == 'allow') {
+                        $('#ts').html('登录成功！');
+                        escape();
+                    }
+                    else {
+                        $('#ts').html('账号或密码错误！');
+                        is_show();
+                    }
+                }
+            })
+        }
+
+        function escape() {
+            is_show();
+            $('.btn').click(function () {
+                is_hide();
+                if ($('.month3').attr('isok') == 'true') {
+                    setCookie('name', $('#username').val(), 90);
+                }
+                else{
+                    setCookie('name', $('#username').val());
+                }
+                // sessionStorage.name = $('#username').val();
+                let url = localStorage.url;
+                if (!url) {
+                    location.href = 'index.html';
+                } else {
+                    location.href = url;
+                }
+            })
+        }
+
+        $('.btn').click(function () {
+            is_hide();
+        })
+
+        function is_hide() {
+            $('.alert').animate({ 'top': '-40%' }, 500);
+            $('.cover').attr('style', 'display:none');
+        };
+        function is_show() {
+            $('.alert').show().animate({ 'top': '45%' }, 500);
+            $('.cover').attr('style', 'display:block');
+        };
+
+    })();
+</script>
+
+</html>

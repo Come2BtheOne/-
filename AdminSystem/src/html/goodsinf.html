@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/goodsinf.css">
+</head>
+
+<body>
+    <div id="content">
+        <div class="content_header">
+            <h1>商品列表</h1>
+            <hr>
+        </div>
+        <div class="content_main">
+            <div class="title clearfix">
+                <span class="fl">
+                    <input type="checkbox" id="allcheck">
+                    <h2>全选</h2>
+                </span>
+                <span class="fl">
+                    <input type="checkbox" id="fcheck">
+                    <h2>反选</h2>
+                </span>
+                <span class="fl">
+                    <a href="###" id="delall" class="delall">删除选中</a>
+                </span>
+                <span class="fr">
+                    <input type="text" id="searchID" class="searchID" placeholder="搜索商品ID">
+                    <a href="###" id="searchbtn" class="searchbtn"></a>
+                </span>
+            </div>
+            <!-- contenteditable="true" -->
+            <table id="usertable" class="usertable" cellspacing=0 cellspadding=0>
+                <thead id="thead" class="thead">
+                    <tr>
+                        <th></th>
+                        <th>商品ID</th>
+                        <th>商品价格</th>
+                        <th>近期成交量</th>
+                        <th>宝贝名字</th>
+                        <th>库存</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td><input type="checkbox" id="checkbtn"></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>
+                            <input type="button" value="修改并保存">
+                            <input type="button" value="删除">
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script src="../lib/Ray-common.js"></script>
+<script src="../js/goodsinf.js"></script>
+</html>

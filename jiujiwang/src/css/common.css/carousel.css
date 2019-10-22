@@ -1,0 +1,66 @@
+
+.pb-carouselWarp {
+    position: relative;
+    width: 760px;
+    height: 480px;
+    overflow: hidden;
+}
+.pb-carouselWarp .pb-carousel {
+  position: relative;
+  height: 100%;
+}
+.pb-carouselWarp .pb-carousel li {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel li img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.pb-carouselWarp .pb-carousel .pb-this {
+  display: block;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel-ind {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pb-carouselWarp .pb-carousel-ind li {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.2);
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pb-carouselWarp .pb-carousel-ind .pb-this {
+  background-color: #fff;
+}
+.pb-carouselWarp .pb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 70px;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.pb-carouselWarp .pb-arrow-prev {
+  left: 10px;
+}
+.pb-carouselWarp .pb-arrow-next {
+  right: 10px;
+}
+
